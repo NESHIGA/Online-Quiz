@@ -1,14 +1,19 @@
-import React from 'react';
-const Header=({isLoggedIn,currentRole,onLogout,onNavigate}) => {
+import {React,useState} from 'react';
+
+const Header=() => {
+    const[onNavigate,setOnNavigate]=useState()
+    const[isLoggedIn,setIsLoggedIn]=useState()
+    const[currentRole,setCurrentRole]=useState()
+    const[onLogout,setIsLogout]=useState()
     const styles={
         header: {
         display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '15px 40px',
-        backgroundColor: '#ffffff',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
-        position: 'fixed',
+        justifyContent:'space-between',
+        alignItems:'center',
+        padding:'15px 40px',
+        backgroundColor:'#ffffff',
+        boxShadow:'0 2px 10px rgba(0,0,0,0.08)',
+        position:'fixed',
         top: 0,
         left: 0,
         right: 0,
